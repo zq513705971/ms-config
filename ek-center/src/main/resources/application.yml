@@ -1,5 +1,12 @@
 server:
   port: 8761
+spring:
+  application:
+    name: ek-center
+  security:
+    user:
+      name: admin
+      password: Eccom123
 eureka:
   instance:
     hostname: ek-center
