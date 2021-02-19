@@ -1,0 +1,14 @@
+server:
+  port: 8885
+spring:
+  application:
+    name: ms-sleuth
+#  zipkin:
+#    base-url: http://localhost:9411
+#  sleuth:
+#    sampler:
+#      probability: 1 #设置Sleuth的抽样收集概率
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:Eccom123@localhost:8761/eureka/

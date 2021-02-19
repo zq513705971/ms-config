@@ -1,0 +1,12 @@
+server:
+  port: 8088
+spring:
+  application:
+    name: ms-oauth2-server
+eureka:
+  instance:
+    hostname: localhost
+    appname: ms-oauth2-server
+  client:
+    service-url:
+      defaultZone: http://admin:Eccom123@localhost:8761/eureka/

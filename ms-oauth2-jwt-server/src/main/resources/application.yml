@@ -1,0 +1,12 @@
+server:
+  port: 8095
+spring:
+  application:
+    name: ms-oauth2-jwt-server
+eureka:
+  instance:
+    hostname: localhost
+    appname: ms-oauth2-jwt-server
+  client:
+    service-url:
+      defaultZone: http://admin:Eccom123@localhost:8761/eureka/

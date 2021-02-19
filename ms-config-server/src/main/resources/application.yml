@@ -1,0 +1,30 @@
+server:
+  port: 8884
+spring:
+  application:
+    name: ms-config-server
+  security:
+    user:
+      name: admin
+      password: Eccom123
+  cloud:
+    config:
+      name: ms-config
+      server:
+        git: #配置存储配置信息的Git仓库
+          uri: https://github.com/zq513705971/ms-config.git
+          username: zq513705971
+          password: 900104zq
+          clone-on-start: true #开启启动时直接从git获取配置
+eureka:
+  instance:
+    hostname: localhost
+    appname: ms-config-server
+  client:
+    service-url:
+      defaultZone: http://admin:Eccom123@localhost:8761/eureka/
+management:
+  endpoints: #暴露bus刷新配置的端点
+    web:
+      exposure:
+        include: 'bus-refresh'      

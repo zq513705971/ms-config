@@ -1,0 +1,18 @@
+server:
+  port: 8883
+spring:
+  application:
+    name: ms-mq
+  rabbitmq:
+    host: 172.30.8.3
+    port: 5672
+    username: guest
+    password: guest
+eureka:
+  instance:
+    hostname: localhost
+    appname: ms-mq
+  client:
+    service-url:
+      #      defaultZone: http://localhost:8761/eureka/
+      defaultZone: http://admin:Eccom123@localhost:8761/eureka/

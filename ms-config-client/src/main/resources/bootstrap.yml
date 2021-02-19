@@ -1,0 +1,22 @@
+spring:
+  #profiles: dev
+  application:
+    name: ms-config-client
+  cloud:
+    config:
+      profile: dev # 代表环境名称
+      label: master # 代表分支名称
+      #uri: http://localhost:8884
+      name: ms-config
+      discovery:
+        enabled: true
+        service-id: ms-config-server
+eureka:
+  client:
+    service-url:
+      defaultZone: http://admin:Eccom123@localhost:8761/eureka/
+management:
+  endpoints:
+    web:
+      exposure:
+        include: 'refresh'
